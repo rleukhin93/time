@@ -1,0 +1,18 @@
+.tv-without-border,
+.tv-without-border__header {
+  display: flex;
+  gap: 60px;
+}
+
+.tv-without-border__header>*,
+.tv-without-border__col {
+  flex: 1;
+}
+
+@media screen and (max-width:768px) {
+
+  .tv-without-border,
+  .tv-without-border__header {
+    flex-direction: column;
+  }
+}

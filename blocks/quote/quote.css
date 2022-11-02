@@ -1,0 +1,60 @@
+.quote {
+  font-family: 'Formular-Light';
+  color: #304EFF;
+  font-size: 43px;
+  position: relative;
+  padding-left: 185px;
+  padding-top: 50px;
+  margin: 0;
+}
+
+.quote::after {
+  content: '';
+  width: 180px;
+  height: 180px;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  background-image: url('../../images/Quote.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.text-bold {
+  font-family: 'Formular-Bold', sans-serif;
+}
+
+.quote sup {
+  color:#758585;
+  top: -21px;  
+  font-size: 44%;
+}
+
+@media screen and (max-width:768px) {
+
+  .quote {
+    padding-left: 60px;
+    margin: 0;
+    font-size: 25px;
+  }
+
+  .quote::after {
+    width: 60px;
+    height: 60px;
+  }
+}
+
+@media screen and (max-width:480px) {
+
+  .quote {
+    padding-top: 30px;
+    padding-left: 30px;
+    margin: 0;
+    font-size: 20px;
+  }
+
+  .quote::after {
+    width: 30px;
+    height: 30px;
+  }
+}

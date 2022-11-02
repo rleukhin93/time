@@ -1,0 +1,32 @@
+.report-bar-item {
+  font-size: 13px;
+  display: flex;
+  margin: 15px 0;
+  gap: 30px;
+}
+.report-bar-item__text {
+  flex: 1;
+}
+.report-bar-item__bar {
+  flex: 2;
+  display: flex;
+  align-items: center;
+}
+.report-bar{
+  width: 100%;
+  /* border:1px solid #304EFF; */
+  background-color: #304EFF;
+  height: 40px;
+  color: #fff;
+  align-items: center;
+  display: flex;
+  padding: 0 10px;
+  font-size: 30px;
+}
+
+@media screen and (max-width:768px) {
+  .report-bar-item {
+    flex-direction: column;
+    gap: 10px;
+  } 
+}

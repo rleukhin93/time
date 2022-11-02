@@ -1,0 +1,8 @@
+.second-screen {
+  display: flex;
+  color: #fff;
+  text-align: center;
+  flex-direction: column;
+  /* gap: 30px; */
+  justify-content: space-evenly;
+}

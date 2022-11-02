@@ -1,0 +1,22 @@
+.new-vector__title-second {
+  margin: 0;
+  font-weight: 400;
+  font-family: 'Formular-Light';
+  font-size: 65px;
+  text-transform: uppercase;
+  text-align: center;
+  position: relative;
+  /* top: -192px;
+  height: 0px; */
+  color:#304EFF;
+  background: #E1E1E6;
+}
+
+@media screen and (max-width:768px) {
+  .new-vector__title-second {
+    top: auto;
+    height: auto;
+    font-size: 35px;
+  }
+
+}

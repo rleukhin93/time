@@ -1,0 +1,93 @@
+.report-full-version {
+  margin-bottom: 90px;
+}
+
+.report-full-version__content {
+  display: flex;
+  padding: 30px 0;
+  gap: 30px;
+
+}
+
+
+.report-full-version__title {
+  font-family: 'Formular';
+  font-size: 28px;
+}
+
+.bg-color-blue {
+  background-color: #DEE4FF;
+}
+
+.bg-color-gray {
+  background-color: #F0F0F2;
+}
+.bg-color-light-gray {
+  background-color: #E1E1E6;
+}
+
+.bg-color-green {
+  background-color: #04DC73;
+}
+
+.bg-color-dark-blue {
+  background-color: #304EFF;
+}
+.color-dark-blue {
+  color: #304EFF;
+}
+.color-dark-green {
+  color: #04DC73;
+}
+
+.report-full-version__col-1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30%;
+
+}
+
+.report-btn {
+  font-family: 'Formular';
+  display: block;
+  padding: 25px;
+  color: #fff;
+  font-size: 20px;
+  text-decoration: none;
+  background-color: #304EFF;
+  text-align: center;
+}
+
+.report-list {
+  margin: 0;
+}
+
+.report-list li {
+  font-size: 20px;
+  line-height: 30px;
+}
+
+@media screen and (max-width:768px) {
+  .report-full-version__content {
+    flex-direction: column;
+  }
+
+  /* .report-full-version__title {
+    font-size: 28px;
+  } */
+
+  .report-list li {
+    font-size: 16px;
+    line-height: 30px;
+  }
+
+  .report-full-version__col-1 {
+    width: 100%;
+    align-items: center;
+  }
+
+  .report-btn {
+    margin: 20px;
+  }
+}

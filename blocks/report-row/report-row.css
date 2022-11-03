@@ -1,0 +1,9 @@
+.report-row {
+  display: flex;
+}
+
+@media screen and (max-width:768px) {
+  .report-row {
+    flex-direction: column;
+  } 
+}

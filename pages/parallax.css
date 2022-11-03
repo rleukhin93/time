@@ -1,0 +1,88 @@
+body {
+  $ui-01: #262626;
+  $black: #000;
+  background: radial-gradient(circle, $ui-01 0%, $black 200%);
+  font-family: 'IBM Plex Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font-size: 24px;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+.parallax {
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+  -webkit-perspective: 1px;
+  perspective: 1px;
+}
+
+.parallax-layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 100vh;
+  white-space: nowrap;
+}
+
+.parallax-layer.one {
+  color: #ccc;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+}
+
+.parallax-layer.two {
+  color: #bbb;
+  -webkit-transform: translateZ(-.25px);
+  transform: translateZ(-.25px);
+}
+
+.parallax-layer.three {
+  color: #aaa;
+  -webkit-transform: translateZ(-.5px);
+  transform: translateZ(-.5px);
+}
+
+.parallax-layer.four {
+  color: #999;
+  -webkit-transform: translateZ(-.75px);
+  transform: translateZ(-.75px);
+}
+
+.parallax-layer.five {
+  color: #888;
+  -webkit-transform: translateZ(-1px);
+  transform: translateZ(-1px);
+}
+
+.parallax-layer.six {
+  color: #777;
+  -webkit-transform: translateZ(-1.25px);
+  transform: translateZ(-1.25px);
+}
+
+.parallax-layer.seven {
+  color: #666;
+  -webkit-transform: translateZ(-1.5px);
+  transform: translateZ(-1.5px);
+}
+
+.parallax-layer.eight {
+  color: #555;
+  -webkit-transform: translateZ(-1.75px);
+  transform: translateZ(-1.75px);
+}
+
+.parallax-layer.nine {
+  color: #444;
+  -webkit-transform: translateZ(-2px);
+  transform: translateZ(-2px);
+}
+
+.parallax-layer.ten {
+  color: #333;
+  -webkit-transform: translateZ(-2.25px);
+  transform: translateZ(-2.25px);
+}

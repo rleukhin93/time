@@ -1,0 +1,33 @@
+.report-counter {
+  background: #cccccc;
+}
+.report-counter__inner {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  height: 115px;
+  padding-bottom: 30px;
+}
+
+.report-counter__inner > * {
+  flex: 1;
+  align-items: center;
+  line-height: 1;
+  font-size: 23px;
+}
+.report-counter__inner > div:nth-child(1) {flex: 1.3;}
+.report-counter__inner > div:nth-child(2) {flex: 2.3;}
+/* .report-counter__inner > div:nth-child(3) {flex: 1.;} */
+
+.report-counter__inner .report-count {
+  font-size: 210px;
+}
+
+@media screen and (max-width:768px) {
+  .report-counter__inner{
+    flex-direction: column;
+    height: auto;
+    align-items: center;
+    gap: 20px;
+  }
+}

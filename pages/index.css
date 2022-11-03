@@ -1,0 +1,27 @@
+@import url(../vendor/normalize.css);
+@import url(../vendor/fonts.css);
+
+@import url(../blocks/page/page.css);
+
+@import url(../blocks/container/container.css);
+@import url(../blocks/report-full-version/report-full-version.css);
+@import url(../blocks/first-screen/first-screen.css);
+@import url(../blocks/second-screen/second-screen.css);
+@import url(../blocks/quote/quote.css);
+@import url(../blocks/report-histograms/report-histograms.css);
+@import url(../blocks/report-counter/report-counter.css);
+@import url(../blocks/report-count/report-count.css);
+@import url(../blocks/new-vector/new-vector.css);
+@import url(../blocks/report-bar-item/report-bar-item.css);
+@import url(../blocks/tv-without-border/tv-without-border.css);
+@import url(../blocks/report-persent-77/report-persent-77.css);
+@import url(../blocks/tv-navigator/tv-navigator.css);
+
+@import url(../blocks/report-row/report-row.css);
+@import url(../blocks/text-center/text-center.css);
+@import url(../blocks/page-header-fixed/page-header-fixed.css);
+@import url(../blocks/page-nav/page-nav.css);
+@import url(../blocks/parallax/parallax.css);
+@import url(../blocks/svg/svg.css);
+@import url(../blocks/svg-graf-3/svg-graf-3.css);
+

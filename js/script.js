@@ -51,7 +51,7 @@ window.onload = function () {
   pageCounts.forEach(item => {
 
     var numberTop = item.getBoundingClientRect().top
-    var start = +item.innerHTML 
+    var start = +item.innerHTML
     var end = +item.dataset.max
     var speed = +item.dataset.speed
 
@@ -63,12 +63,103 @@ window.onload = function () {
           if (start == end) {
             clearInterval(interval);
           }
-        // });
+          // });
         }, speed); // скорость прокрутки
       }
     });
 
   })
+
+  //включаем анимацию графиков при прокрутке экрана до соот графика
+  const svgGrafs = document.querySelectorAll(".svg-graf-js");
+
+  svgGrafs.forEach(item => {
+    var numberTop = item.getBoundingClientRect().top;
+    const colls = item.querySelectorAll('.svg-text-month')
+
+    window.addEventListener('scroll', function onScroll() {
+      if (window.pageYOffset > numberTop - window.innerHeight / 2) {
+        this.removeEventListener('scroll', onScroll);
+        var interval = setInterval(function () {
+
+          console.log('до скролили до графика ');
+          // надо увеличить добавить animation-bt к соот столбикам
+          colls.forEach(item => { item.classList.add('animation-bt'); })
+
+
+          if (true) {// выходим из цикла
+            clearInterval(interval);
+          }
+        });
+      }
+    });
+
+  })
+  //включаем анимацию баров(report-bar-js ) при прокрутке экрана до соотбаров(report-bar-js )
+  const reportBars = document.querySelectorAll(".report-bar-js ");
+
+  reportBars.forEach(item => {
+    var numberTop = item.getBoundingClientRect().top;
+    // const colls = item.querySelectorAll('.svg-text-month')
+
+    window.addEventListener('scroll', function onScroll() {
+      if (window.pageYOffset > numberTop - window.innerHeight / 2) {
+        this.removeEventListener('scroll', onScroll);
+        var interval = setInterval(function () {
+          const animateDirection = item.dataset.direction
+
+          console.log('до скролили до бара item = ', item);
+          console.log('до скролили до бара animateDirection = ', item.dataset.direction);
+          // надо увеличить добавить animation-bt к соот столбикам
+          if (item.dataset.direction == 'lr') {
+
+            item.classList.add('animation-lr');
+
+          }
+          if (item.dataset.direction == 'rl') {
+
+            item.classList.add('animation-rl');
+          }
+
+
+          if (true) {// выходим из цикла
+            clearInterval(interval);
+          }
+        });
+      }
+    });
+
+  })
+
+
+  // const svgGrafs = document.querySelectorAll(".svg-graf-js");
+
+  // svgGrafs.forEach(item => {
+
+  //   var numberTop = item.getBoundingClientRect().top
+  //   var start = +item.dataset.delay
+  //   var end = +item.dataset.max
+  //   var speed = +item.dataset.speed
+
+  //   window.addEventListener('scroll', function onScroll() {
+  //     if (window.pageYOffset > numberTop - window.innerHeight / 2) {
+  //       this.removeEventListener('scroll', onScroll());
+  //       var interval = setInterval(function () {
+
+  //         console.log('до скролили до графика');
+  //         // надо увеличить delay
+  //         ++start;
+
+  //         if (start == end) { // условие выхода из цикла
+  //           clearInterval(interval);
+  //         }
+  //         // });
+  //       }, speed); // скорость прокрутки
+  //     }
+  //   });
+
+  // })
+
 
   //перeход по страницам
   //прокрутка до след пункта + фиксация соот пункта вверху стр 
@@ -147,44 +238,44 @@ window.onload = function () {
   wow.init();
 
   // //Parallax
-      $('.jumbotron-1').paroller();
-    $('.jumbotron-2').paroller();
-    $('.jumbotron-3').paroller();
+  $('.jumbotron-1').paroller();
+  $('.jumbotron-2').paroller();
+  $('.jumbotron-3').paroller();
 
 
-    // var income = document.getElementById("income").getContext("2d");
-    // var barData = {
-    //   labels: ["", "", ""],
-    //   datasets: [
-    //     {
-    //       fillColor: "blue",
-    //       strokeColor: "blue",
-    //       data: [25, 56, 19]
-    //     },
-    //     {
-    //       fillColor: "green",
-    //       strokeColor: "green",
-    //       data: [24, 50, 25]
-    //     }
+  // var income = document.getElementById("income").getContext("2d");
+  // var barData = {
+  //   labels: ["", "", ""],
+  //   datasets: [
+  //     {
+  //       fillColor: "blue",
+  //       strokeColor: "blue",
+  //       data: [25, 56, 19]
+  //     },
+  //     {
+  //       fillColor: "green",
+  //       strokeColor: "green",
+  //       data: [24, 50, 25]
+  //     }
 
-    //   ]
-    // }
-    // new Chart(income).Bar(barData);
+  //   ]
+  // }
+  // new Chart(income).Bar(barData);
 
 
   /* //  test-diagrams */
-  let captionsList = document.querySelectorAll('.caption-item');
-  let unitsList = document.querySelectorAll('.unit');
+  // let captionsList = document.querySelectorAll('.caption-item');
+  // let unitsList = document.querySelectorAll('.unit');
 
-  captionsList.forEach(function (item, index) {
-    item.addEventListener('mouseover', function () {
-      unitsList[index].classList.add('hovered');
-    });
+  // captionsList.forEach(function (item, index) {
+  //   item.addEventListener('mouseover', function () {
+  //     unitsList[index].classList.add('hovered');
+  //   });
 
-    item.addEventListener('mouseout', function () {
-      unitsList[index].classList.remove('hovered');
-    });
-  });
+  //   item.addEventListener('mouseout', function () {
+  //     unitsList[index].classList.remove('hovered');
+  //   });
+  // });
 
 
 

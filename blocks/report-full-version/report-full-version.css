@@ -1,4 +1,7 @@
 .report-full-version {
+  padding: 60px 0;
+  display: grid;
+  gap: 60px;
   margin-bottom: 90px;
 }
 
@@ -38,6 +41,16 @@
 }
 .color-dark-green {
   color: #04DC73;
+}
+
+.color-pink {
+  color: #E627FF;
+}
+.color-yellow {
+  color: #E0E119;
+}
+.color-gray {
+  color: #cccccc;
 }
 
 .report-full-version__col-1 {

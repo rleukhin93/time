@@ -9,6 +9,40 @@
   flex: 1;
 }
 
+.tv-without-border__col {
+  display: flex;
+  gap: 10px;
+}
+
+.tv-without-border__col .svg-graf-3-wrapper {
+  width: 100%;
+  flex: 1;
+}
+
+
+.text-small-bold--22 {
+  display: none;
+}
+
+@media screen and (max-width:1400px) {
+
+  .tv-without-border,
+  .tv-without-border__header,
+  .tv-without-border__col {
+    flex-direction: column;
+  }
+
+  .text-small-bold--2 {
+    display: none;
+  }
+
+  .text-small-bold--22 {
+    display: block;
+  }
+}
+
+
+
 @media screen and (max-width:768px) {
 
   .tv-without-border,

@@ -1,0 +1,93 @@
+.graf-5-col .graf-text-wrap-inner {
+  grid-template-columns: repeat(5, calc(100% / 5 - 5px));
+}
+
+.graf-5-col {
+  position: relative;
+  margin: 0 0 80px 0;
+  width: 70%;
+  height: 330px;
+  padding: 0 18px;
+}
+.graf-5-col .graf-text {
+  width: 43px;
+}
+
+.graf-5-col::after {
+  content: attr(data-info);
+  position: absolute;
+  bottom: -60px;
+  left: 0px;
+
+  font-size: 13px;
+  color: #758585;
+}
+
+.graf-5-col::before {
+  content: attr(data-info-1);
+  position: absolute;
+  bottom: -78px;
+  left: 0px;
+
+  font-size: 13px;
+  color: #758585;
+}
+
+/* ------------------.graf-5-col--left ------------------------- */
+
+.graf-5-col--left .height-1 {
+  background-color: #304EFF !important;
+  transition: height 1s cubic-bezier(0, 0, 1, 1) 500ms;
+  height: 300px;
+}
+
+.graf-5-col--left .height-2 {
+  background-color: #04DC73 !important;
+  transition: height 1s cubic-bezier(0, 0, 1, 1) 500ms;
+  height: 150px;
+}
+.graf-5-col--left .height-3 {
+  background-color: #cccccc !important;
+  transition: height 1s cubic-bezier(0, 0, 1, 1) 500ms;
+  height: 15px;
+}
+
+.graf-5-col--left .height-4 {
+  background-color: #E627FF !important;
+  transition: height 1s cubic-bezier(0, 0, 1, 1) 500ms;
+  height: 225px;
+}
+.graf-5-col--left .height-5 {
+  background-color: #E0E119 !important;
+  transition: height 1s cubic-bezier(0, 0, 1, 1) 500ms;
+  height: 60px;
+}
+
+/* --------------------.graf-5-col--right ----------------------------------- */
+.graf-5-col--right .height-1 {
+  background-color: #304EFF !important;
+  transition: height 1s cubic-bezier(0, 0, 1, 1) 500ms;
+  height: 300px;
+}
+
+.graf-5-col--right .height-2 {
+  background-color: #04DC73 !important;
+  transition: height 1s cubic-bezier(0, 0, 1, 1) 500ms;
+  height: 263px;
+}
+.graf-5-col--right .height-3 {
+  background-color: #cccccc !important;
+  transition: height 1s cubic-bezier(0, 0, 1, 1) 500ms;
+  height: 215px;
+}
+
+.graf-5-col--right .height-4 {
+  background-color: #E627FF !important;
+  transition: height 1s cubic-bezier(0, 0, 1, 1) 500ms;
+  height: 137px;
+}
+.graf-5-col--right .height-5 {
+  background-color: #E0E119 !important;
+  transition: height 1s cubic-bezier(0, 0, 1, 1) 500ms;
+  height: 30px;
+}

@@ -1,7 +1,7 @@
 .report-histograms {
   display: flex;
   gap: 30px;
-  padding-top: 30px;
+  padding: 30px 0;
 }
 
 
@@ -24,9 +24,21 @@
   font-family: 'Formular-Bold', sans-serif;
 }
 
+@media screen and (max-width:480px) {
+  .text-small-bold {
+    font-size: 18px;
+  }
+}
+
 .report-histograms__col .text-small-bold {
   margin-bottom: 60px;
 }
+@media screen and (max-width:768px) {
+  .report-histograms__col .text-small-bold {
+    margin-bottom: 0;
+  }
+}
+
 
 
 .report-histograms__img {
@@ -69,6 +81,11 @@ small {
   color: #758585;
   display: block;
   margin: 30px 0;
+}
+@media screen and (max-width:768px) {
+  small {
+    margin: 0;
+  } 
 }
 
 
@@ -138,7 +155,7 @@ small {
 
   .report-histograms__col {
     width: 100%;
-    gap: 20px;
+    gap: 40px;
   }
 
   .pr-sm-60px {
@@ -151,7 +168,13 @@ small {
   }
 }
 
-/* //  test-diagrams */
+@media screen and (max-width:480px) {
+  .report-histograms {
+    padding: 0;
+  }
+}
+
+
 
 @keyframes render {
   0% {
@@ -163,7 +186,9 @@ small {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  max-width: 800px;
+  max-width: 300px;
+  position: relative;
+  margin: auto;
 }
 
 

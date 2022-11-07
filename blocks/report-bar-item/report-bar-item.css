@@ -1,8 +1,8 @@
 .report-bar-item {
-  font-size: 13px;
+  font-size: 14px;
   display: flex;
   margin: 15px 0;
-  gap: 30px;
+  gap: 20px;
 }
 .report-bar-item__text {
   flex: 1;

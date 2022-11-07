@@ -218,6 +218,9 @@
 .first-screen__link {
   animation-delay: 1.4s;
 }
+/* .first-screen__logo-dots {
+  animation-delay: 1.2s;
+} */
 
 /* мигание логотипа */
 @keyframes fadeIn {

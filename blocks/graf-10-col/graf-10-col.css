@@ -1,0 +1,104 @@
+.graf-10-col .graf-text-wrap-inner {
+  grid-template-columns: repeat(10, calc(100% / 10 - 20px ));
+  gap: 20px;
+  /* border: 1px solid green; */
+  height: 320px;
+}
+
+.graf-10-col {
+  position: relative;
+}
+
+.graf-10-col::after {
+  content: attr( data-info);
+  position: absolute;
+  bottom: -60px;
+  left: 0;
+  white-space: nowrap;
+
+  font-size: 13px;
+  color: #758585;
+}
+
+.graf-10-col .graf-text {
+  width: 40px;
+}
+
+@media screen and (max-width: 1400px) {
+  .graf-10-col{
+    gap: 15px;
+    max-width: 100%;
+    margin: auto;
+  }
+  .graf-10-col .graf-text {
+    width: 30px;
+  }
+  .graf-10-col .graf-text-num {
+    font-size: 18px;
+  }
+
+  .graf-10-col::after {
+    bottom: -52px;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    white-space: break-spaces;
+  }
+}
+
+/* ---------------------- */
+.graf-10-col .height-1,
+.graf-10-col .height-2,
+.graf-10-col .height-3,
+.graf-10-col .height-4,
+.graf-10-col .height-5,
+.graf-10-col .height-6, 
+.graf-10-col .height-7, 
+.graf-10-col .height-8, 
+.graf-10-col .height-9, 
+.graf-10-col .height-10 {
+  background-color: #2a4dff !important;
+  /* background-color: red  !important; */
+  transition: height 1s cubic-bezier(0, 0, 1, 1) 500ms;
+}
+--------------------
+.graf-10-col .height-1 {
+  height:90px !important;
+  border:1px solid green  !important;
+}
+.graf-10-col .height-2 {
+  height: 110px;
+}
+.graf-10-col .height-3 {
+  height: 130px;
+}
+.graf-10-col .height-4 {
+  height: 150px;
+}
+.graf-10-col .height-5 {
+  height: 170px;
+}
+.graf-10-col .height-6 {
+  height: 190px;
+}
+.graf-10-col .height-7 {
+  height: 210px;
+}
+.graf-10-col .height-8 {
+  height: 230px;
+}
+.graf-10-col .height-9 {
+  height: 250px;
+}
+.graf-10-col .height-10 {
+  height: 270px;
+}
+/* ---------------------- */
+
+@media screen and (max-width: 380px){
+
+  .graf-10-col .graf-text {
+      width: 20px;
+  }
+
+}

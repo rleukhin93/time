@@ -1,0 +1,140 @@
+
+.graf-6-col .graf-text-wrap-inner {
+  grid-template-columns: repeat(6, calc(100% / 6 - 0px));
+  gap: 0;
+}
+
+.graf-6-col {
+  position: relative;
+  margin: 0 0 80px 0;
+  height: 320px;
+  padding: 0 18px;
+}
+
+@media screen and (max-width:1400px) {
+  .graf-6-col {
+    max-width: 400px;
+    margin: auto;
+  }
+}
+
+@media screen and (max-width:480px) {
+  .graf-6-col {
+    max-width: 300px;
+    margin: auto;
+    width: 70%;
+    padding: 0;
+    margin: 0;
+  }
+}
+
+
+
+.graf-6-col .graf-text {
+  width: 100%;
+}
+
+.graf-6-col::before {
+  content: attr(data-info-before);
+  position: absolute;
+  left: 20px;
+  font-size: 14px;
+  border: 3px solid #2a4dff;
+  width: 51px;
+  height: 51px;
+  border-radius: 50%;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #2a4dff;
+  font-family: 'Formular-Bold';
+  font-size: 16px;
+}
+.graf-6-col::after { 
+  content: attr( data-info-after);
+  position: absolute;
+  bottom: -60px;
+  left: 20px;
+  white-space: nowrap;
+
+  font-size: 13px;
+  color: #758585;
+}
+.graf-6-col--last::after{
+  content:  '';
+}
+
+@media screen and (max-width:1400px) {
+  .graf-6-col--first::after {
+    content: '';
+  }
+  .graf-6-col--last::after { 
+    content: attr( data-info-after);
+    bottom: -40px;
+  }
+}
+
+.graf-6-col .height-1 {
+  background-color: #eaedff !important;
+  transition: height 1s cubic-bezier(0, 0, 1, 1) 500ms;
+  height:30px;
+}
+.graf-6-col .height-2 {
+  background-color: #d4dbff  !important;
+  transition: height 1s cubic-bezier(0, 0, 1, 1) 500ms;
+  height: 40px;
+}
+.graf-6-col .height-3 {
+  background-color: #bfcaff  !important;
+  transition: height 1s cubic-bezier(0, 0, 1, 1) 500ms;
+  height: 50px;
+}
+.graf-6-col .height-4 {
+  background-color: #aab8ff   !important;
+  transition: height 1s cubic-bezier(0, 0, 1, 1) 500ms;
+  height: 60px;
+}
+.graf-6-col .height-5 {
+  background-color: #95a6ff   !important;
+  transition: height 1s cubic-bezier(0, 0, 1, 1) 500ms;
+  height: 70px;
+}
+.graf-6-col .height-6 {
+  background-color: #2a4dff   !important;
+  transition: height 1s cubic-bezier(0, 0, 1, 1) 500ms;
+  height: 80px;
+}
+/* ---------------------- */
+.graf-6-col--height-2 .height-1 {
+  background-color: #eaedff !important;
+  transition: height 1s cubic-bezier(0, 0, 1, 1) 500ms;
+  height:40px;
+}
+.graf-6-col--height-2 .height-2 {
+  background-color: #d4dbff  !important;
+  transition: height 1s cubic-bezier(0, 0, 1, 1) 500ms;
+  height: 60px;
+}
+.graf-6-col--height-2 .height-3 {
+  background-color: #bfcaff  !important;
+  transition: height 1s cubic-bezier(0, 0, 1, 1) 500ms;
+  height: 80px;
+}
+.graf-6-col--height-2 .height-4 {
+  background-color: #aab8ff   !important;
+  transition: height 1s cubic-bezier(0, 0, 1, 1) 500ms;
+  height: 120px;
+}
+.graf-6-col--height-2 .height-5 {
+  background-color: #95a6ff   !important;
+  transition: height 1s cubic-bezier(0, 0, 1, 1) 500ms;
+  height: 160px;
+}
+.graf-6-col--height-2 .height-6 {
+  background-color: #2a4dff   !important;
+  transition: height 1s cubic-bezier(0, 0, 1, 1) 500ms;
+  height: 200px;
+}
+/* ---------------------- */

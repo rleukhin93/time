@@ -1,0 +1,48 @@
+/* -------------------------------------- */
+.graf-double-col-wrapper {
+  position: relative;
+  margin: 0 0 80px 0;
+  height: 100%;
+}
+
+
+.graf-double-col-wrapper .graf-text-wrap-inner {
+  grid-template-columns: repeat(2, calc(100% / 2 - 10px));
+  gap: 20px;
+}
+
+.graf-double-col-wrapper .height-1 {
+  background-color: #304EFF !important;
+  transition: height 1s cubic-bezier(0, 0, 1, 1) 500ms;
+  height: 95px;
+}
+
+.graf-double-col-wrapper .height-2 {
+  background-color: #04DC73 !important;
+  transition: height 1s cubic-bezier(0, 0, 1, 1) 500ms;
+  height: 75px;
+}
+
+.graf-double-col-wrapper .height-11 {
+  background-color: #304EFF !important;
+  transition: height 1s cubic-bezier(0, 0, 1, 1) 500ms;
+  height: 225px;
+}
+
+.graf-double-col-wrapper .height-12 {
+  background-color: #04DC73 !important;
+  transition: height 1s cubic-bezier(0, 0, 1, 1) 500ms;
+  height: 180px;
+}
+
+.graf-double-col-wrapper .height-21 {
+  background-color: #304EFF !important;
+  transition: height 1s cubic-bezier(0, 0, 1, 1) 500ms;
+  height: 70px;
+}
+
+.graf-double-col-wrapper .height-22 {
+  background-color: #04DC73 !important;
+  transition: height 1s cubic-bezier(0, 0, 1, 1) 500ms;
+  height: 125px;
+}

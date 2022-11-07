@@ -3,7 +3,9 @@ window.onload = function () {
   //стрелка в верх
   const arrowTop = document.querySelector(".arrow-top");
   const top = document.querySelector('#top');
-  console.log('top = ', top);
+  const startingPoint = document.querySelector('#section2');
+  const screenLink = document.querySelector('.first-screen__link');
+  const topLineStartingPoint = document.querySelector('.report-top-line--starting-point');
 
   function scrollTo(element) {
     window.scroll({
@@ -12,28 +14,17 @@ window.onload = function () {
       behavior: 'smooth'
     })
   }
+
   // клик по стрелочке вверх
   arrowTop.addEventListener('click', () => {
     scrollTo(top);
     topLineStartingPoint.classList.remove('page-header-fixed');
   })
-  // /стрелка в верх
-
-  const startingPoint = document.querySelector('#section2');
-  const newVector = document.querySelector('#section3');
-  const culturalCode = document.querySelector('#section4');
-  const screenLink = document.querySelector('.first-screen__link');
-
-  const topLineStartingPoint = document.querySelector('.report-top-line--starting-point');
-  const topLineNewVector = document.querySelector('.report-top-line--new-vector');
-  const topLineCulturalCode = document.querySelector('.report-top-line--cultural-code');
 
   // клик по стрелочке 'СМОТРЕТЬ ОТЧЕТ'
   screenLink.addEventListener('click', () => {
     scrollTo(startingPoint); //прокрутка до пункта нач точка
-    // фиксация соот заголовка вверху стр
-    console.log('topLineStartingPoint = ', topLineStartingPoint);
-    topLineStartingPoint.classList.add('page-header-fixed');
+    topLineStartingPoint.classList.add('page-header-fixed'); // фиксация соот заголовка вверху стр
   })
 
   //показываем/скрываем стрелку при прокрутке экрана на 200 вниз
@@ -56,7 +47,7 @@ window.onload = function () {
     var speed = +item.dataset.speed
 
     window.addEventListener('scroll', function onScroll() {
-      if (window.pageYOffset > numberTop - window.innerHeight / 2) {
+      if (window.pageYOffset > numberTop - window.innerHeight ) {
         this.removeEventListener('scroll', onScroll);
         var interval = setInterval(function () {
           item.innerHTML = ++start;
@@ -71,19 +62,22 @@ window.onload = function () {
   })
 
   //включаем анимацию графиков при прокрутке экрана до соот графика
-  const svgGrafs = document.querySelectorAll(".svg-graf-js");
-
+  const svgGrafs = document.querySelectorAll(".graf-js");
+  
   svgGrafs.forEach(item => {
+    var svgGrafNumbers = item.querySelectorAll(".number-js");
+    // console.log('svgGrafNumbers = ',svgGrafNumbers);
     var numberTop = item.getBoundingClientRect().top;
-    const colls = item.querySelectorAll('.svg-text-month')
+    const colls = item.querySelectorAll('.graf-text-month')
 
     window.addEventListener('scroll', function onScroll() {
-      if (window.pageYOffset > numberTop - window.innerHeight / 2) {
+      if (window.pageYOffset > numberTop - window.innerHeight ) {
         this.removeEventListener('scroll', onScroll);
         var interval = setInterval(function () {
 
           console.log('до скролили до графика ');
-          // надо увеличить добавить animation-bt к соот столбикам
+
+          //добавим animation-bt к соот столбикам(увеличим столбцы)
           colls.forEach(item => { item.classList.add('animation-bt'); })
 
 
@@ -93,14 +87,14 @@ window.onload = function () {
         });
       }
     });
-
   })
+
   //включаем анимацию баров(report-bar-js ) при прокрутке экрана до соотбаров(report-bar-js )
   const reportBars = document.querySelectorAll(".report-bar-js ");
 
   reportBars.forEach(item => {
     var numberTop = item.getBoundingClientRect().top;
-    // const colls = item.querySelectorAll('.svg-text-month')
+    // const colls = item.querySelectorAll('.graf-text-month')
 
     window.addEventListener('scroll', function onScroll() {
       if (window.pageYOffset > numberTop - window.innerHeight / 2) {
@@ -129,39 +123,10 @@ window.onload = function () {
       }
     });
 
-  })
+  });
 
 
-  // const svgGrafs = document.querySelectorAll(".svg-graf-js");
-
-  // svgGrafs.forEach(item => {
-
-  //   var numberTop = item.getBoundingClientRect().top
-  //   var start = +item.dataset.delay
-  //   var end = +item.dataset.max
-  //   var speed = +item.dataset.speed
-
-  //   window.addEventListener('scroll', function onScroll() {
-  //     if (window.pageYOffset > numberTop - window.innerHeight / 2) {
-  //       this.removeEventListener('scroll', onScroll());
-  //       var interval = setInterval(function () {
-
-  //         console.log('до скролили до графика');
-  //         // надо увеличить delay
-  //         ++start;
-
-  //         if (start == end) { // условие выхода из цикла
-  //           clearInterval(interval);
-  //         }
-  //         // });
-  //       }, speed); // скорость прокрутки
-  //     }
-  //   });
-
-  // })
-
-
-  //перeход по страницам
+  //перeход по страницам(пунктам меню)
   //прокрутка до след пункта + фиксация соот пункта вверху стр 
 
   const sections = document.querySelectorAll("section[id]");

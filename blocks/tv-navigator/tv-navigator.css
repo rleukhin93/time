@@ -12,6 +12,13 @@
   font-size: 18px;
 }
 
+.tv-navigator-row.last-child .number-js{
+  display: flex;
+  justify-content: flex-end;
+  width: 40px;
+}
+
+
 .tv-navigator-row__bar {
   width: 100%;
   /* background-color: #304EFF; */
@@ -29,8 +36,8 @@
 }
 .tv-navigator-row__txt span {
   font-size: 40px;
-  margin-right: 10px;
-  display: block;
+  display: flex;
+  width: 60px;
 }
 
 .tv-navigator-row__bar-inner {

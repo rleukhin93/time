@@ -10,6 +10,8 @@
   font-size: 200px;
   white-space: nowrap;
   min-width: 300px;
+  position: relative;
+  left: -17px;
 }
 
 .report-persent-text {

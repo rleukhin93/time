@@ -19,7 +19,8 @@
   left: 0px;
   font-size: 13px;
   color: #758585;
-  width: 100%;
+  max-width: 87px;
+  margin-left: 20px;
   text-align: center;
 }
 

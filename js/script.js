@@ -63,7 +63,7 @@ window.onload = function () {
 
     window.addEventListener('scroll', function onScroll() {
 
-      if (window.pageYOffset > startFistGrafAnimation - window.innerHeight) {
+      if (window.pageYOffset > startFistGrafAnimation - window.innerHeight - fixYBrowserStartGrafAnimation) {
         this.removeEventListener('scroll', onScroll);
         var interval = setInterval(function () {
           collsFirst.forEach(item => { item.classList.add('animation-bt'); }) //заполняем столбцы
@@ -95,7 +95,7 @@ window.onload = function () {
     var speed = +item.dataset.speed
 
     window.addEventListener('scroll', function onScroll() {
-      if (window.pageYOffset > startSecondGrafAnimation - window.innerHeight) {
+      if (window.pageYOffset > startSecondGrafAnimation - window.innerHeight - fixYBrowserStartGrafAnimation) {
         this.removeEventListener('scroll', onScroll);
         var interval = setInterval(function () {
           collsSecond.forEach(item => { item.classList.add('animation-bt'); }) //заполняем столбцы
@@ -120,7 +120,7 @@ window.onload = function () {
   var speed = +thirdGrag.dataset.speed
 
   window.addEventListener('scroll', function onScroll() {
-    if (window.pageYOffset > startThirdGrafAnimation - window.innerHeight) {
+    if (window.pageYOffset > startThirdGrafAnimation - window.innerHeight - fixYBrowserStartGrafAnimation) {
       this.removeEventListener('scroll', onScroll);
       var interval = setInterval(function () {
         thirdGrag.innerHTML = ++start; // увеличиваем счетчик
@@ -144,7 +144,7 @@ window.onload = function () {
     var speed = +item.dataset.speed
 
     window.addEventListener('scroll', function onScroll() {
-      if (window.pageYOffset > startFourthGrafAnimation - window.innerHeight) {
+      if (window.pageYOffset > startFourthGrafAnimation - window.innerHeight - fixYBrowserStartGrafAnimation) {
         this.removeEventListener('scroll', onScroll);
         var interval = setInterval(function () {
           collsFourth.forEach(item => { item.classList.add('animation-bt'); }) //заполняем столбцы
@@ -176,7 +176,7 @@ window.onload = function () {
     var speed = +item.dataset.speed
 
     window.addEventListener('scroll', function onScroll() {
-      if (window.pageYOffset > startFifthGrafAnimation - window.innerHeight) {
+      if (window.pageYOffset > startFifthGrafAnimation - window.innerHeight - fixYBrowserStartGrafAnimation) {
         this.removeEventListener('scroll', onScroll);
         var interval = setInterval(function () {
           item.innerHTML = ++start; // увеличиваем счетчик
@@ -206,7 +206,7 @@ window.onload = function () {
     var speed = +item.dataset.speed
 
     window.addEventListener('scroll', function onScroll() {
-      if (window.pageYOffset > startSixthGrafAnimation - window.innerHeight) {
+      if (window.pageYOffset > startSixthGrafAnimation - window.innerHeight - fixYBrowserStartGrafAnimation) {
         this.removeEventListener('scroll', onScroll);
         var interval = setInterval(function () {
           collsSixth.forEach(item => { item.classList.add('animation-lr'); }) //заполняем столбцы
@@ -243,7 +243,7 @@ window.onload = function () {
     var speed = +item.dataset.speed
 
     window.addEventListener('scroll', function onScroll() {
-      if (window.pageYOffset > startSeventhGrafAnimation - window.innerHeight) {
+      if (window.pageYOffset > startSeventhGrafAnimation - window.innerHeight - fixYBrowserStartGrafAnimation) {
         this.removeEventListener('scroll', onScroll);
         var interval = setInterval(function () {
           collsSeventh.forEach(item => { item.classList.add('animation-bt'); }) //заполняем столбцы

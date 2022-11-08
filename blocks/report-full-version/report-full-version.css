@@ -71,22 +71,27 @@
 
 .color-dark-blue {
   color: #304EFF;
+  opacity: 0;
 }
 
 .color-dark-green {
   color: #04DC73;
+  opacity: 0;
 }
 
 .color-pink {
   color: #E627FF;
+  opacity: 0;
 }
 
 .color-yellow {
   color: #E0E119;
+  opacity: 0;
 }
 
 .color-gray {
   color: #cccccc;
+  opacity: 0;
 }
 
 .report-full-version__col-1 {

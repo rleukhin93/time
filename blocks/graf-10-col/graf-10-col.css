@@ -58,13 +58,12 @@
 .graf-10-col .height-9, 
 .graf-10-col .height-10 {
   background-color: #2a4dff !important;
-  /* background-color: red  !important; */
   transition: height 1s cubic-bezier(0, 0, 1, 1) 500ms;
+  opacity: 0;
 }
 --------------------
 .graf-10-col .height-1 {
   height:90px !important;
-  border:1px solid green  !important;
 }
 .graf-10-col .height-2 {
   height: 110px;

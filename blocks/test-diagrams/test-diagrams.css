@@ -1,5 +1,10 @@
 .test-diagrams {
   position: relative;
+  /* opacity: 0; */
+}
+
+.test-diagrams-items {
+  opacity: 0;
 }
 
 .test-diagrams__yes,

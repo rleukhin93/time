@@ -1,13 +1,15 @@
 .graf-5-col .graf-text-wrap-inner {
   grid-template-columns: repeat(5, calc(100% / 5 - 5px));
+  height: 340px;
 }
 
 .graf-5-col {
   position: relative;
-  margin: 0 0 80px 0;
+  margin: 0 auto 80px auto;
   width: 70%;
   height: 330px;
   padding: 0 18px;
+
 }
 .graf-5-col .graf-text {
   width: 43px;

@@ -2,11 +2,13 @@
 .graf-6-col .graf-text-wrap-inner {
   grid-template-columns: repeat(6, calc(100% / 6 - 0px));
   gap: 0;
+  width: 100%;
 }
 
-.graf-6-col {
+.graf-6-col { 
   position: relative;
   margin: 0 0 80px 0;
+  min-height: 320px;
   height: 320px;
   padding: 0 18px;
 }
@@ -21,6 +23,7 @@
 @media screen and (max-width:480px) {
   .graf-6-col {
     max-width: 300px;
+    min-height: 250px;
     margin: auto;
     width: 70%;
     padding: 0;

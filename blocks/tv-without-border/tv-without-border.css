@@ -19,6 +19,7 @@ margin-bottom: 60px;
 }
 
 .tv-without-border__col .graf-6-col {
+  display: flex;
   width: 100%;
   flex: 1;
   margin: auto;

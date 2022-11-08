@@ -76,6 +76,21 @@
   }
 }
 
+.graf-6-col .height-1,
+.graf-6-col .height-2,
+.graf-6-col .height-3,
+.graf-6-col .height-4,
+.graf-6-col .height-5,
+.graf-6-col .height-6,
+.graf-6-col--height-2 .height-1,
+.graf-6-col--height-2 .height-2,
+.graf-6-col--height-2 .height-3,
+.graf-6-col--height-2 .height-4,
+.graf-6-col--height-2 .height-5,
+.graf-6-col--height-2 .height-6 {
+  opacity: 0;
+}
+
 .graf-6-col .height-1 {
   background-color: #eaedff !important;
   transition: height 1s cubic-bezier(0, 0, 1, 1) 500ms;

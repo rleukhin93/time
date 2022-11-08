@@ -33,6 +33,20 @@
   color: #758585;
 }
 
+.graf-5-col--left .height-1,
+.graf-5-col--left .height-2,
+.graf-5-col--left .height-3,
+.graf-5-col--left .height-4,
+.graf-5-col--left .height-5,
+.graf-5-col--right .height-1,
+.graf-5-col--right .height-2,
+.graf-5-col--right .height-3,
+.graf-5-col--right .height-4,
+.graf-5-col--right .height-5 {
+  opacity: 0;
+}
+
+
 /* ------------------.graf-5-col--left ------------------------- */
 
 .graf-5-col--left .height-1 {

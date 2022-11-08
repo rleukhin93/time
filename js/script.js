@@ -1,5 +1,7 @@
 window.onload = function () {
 
+  const fixYBrowserStartGrafAnimation = 230;
+
   //стрелка в верх
   const arrowTop = document.querySelector(".arrow-top");
   const top = document.querySelector('#top');
@@ -270,7 +272,7 @@ window.onload = function () {
     var speed = +item.dataset.speed
 
     window.addEventListener('scroll', function onScroll() {
-      if (window.pageYOffset > startEighthGrafAnimation - window.innerHeight) {
+      if (window.pageYOffset > startEighthGrafAnimation - window.innerHeight - fixYBrowserStartGrafAnimation) {
         this.removeEventListener('scroll', onScroll);
         var interval = setInterval(function () {
           collsEighth.forEach(item => { item.classList.add('animation-bt'); }) //заполняем столбцы
@@ -295,7 +297,7 @@ window.onload = function () {
   var speed9 = +ninthGrag.dataset.speed
 
   window.addEventListener('scroll', function onScroll() {
-    if (window.pageYOffset > startNinthGrafAnimation - window.innerHeight) {
+    if (window.pageYOffset > startNinthGrafAnimation - window.innerHeight - fixYBrowserStartGrafAnimation) {
       this.removeEventListener('scroll', onScroll);
       var interval = setInterval(function () {
         ninthGrag.innerHTML = ++start9; // увеличиваем счетчик
@@ -321,7 +323,7 @@ window.onload = function () {
     var speed = +item.dataset.speed
 
     window.addEventListener('scroll', function onScroll() {
-      if (window.pageYOffset > startTenthGrafAnimation - window.innerHeight) {
+      if (window.pageYOffset > startTenthGrafAnimation - window.innerHeight - fixYBrowserStartGrafAnimation) {
         this.removeEventListener('scroll', onScroll);
         var interval = setInterval(function () {
           item.innerHTML = ++start; // увеличиваем счетчик
@@ -338,9 +340,8 @@ window.onload = function () {
   });
 
   tenthGragBars.forEach(item => {
-
     window.addEventListener('scroll', function onScroll() {
-      if (window.pageYOffset > startTenthGrafAnimation - window.innerHeight) {
+      if (window.pageYOffset > startTenthGrafAnimation - window.innerHeight - fixYBrowserStartGrafAnimation) {
         this.removeEventListener('scroll', onScroll);
         var interval = setInterval(function () {
           item.classList.add('animation-rl');

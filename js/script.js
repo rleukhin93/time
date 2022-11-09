@@ -163,8 +163,8 @@ window.onload = function () {
 
   //прокрутили до 5-ого графика
   const fifthGrag = document.querySelector(".graf-js--5");
+  // const fifthGrag = document.querySelector(".graf-js--5 canvas");
   const fifthGragCounts = fifthGrag.querySelectorAll(".number-js");
-  const fifthGragUnit = fifthGrag.querySelectorAll(".circle");
   const fifthGragTestDiagrams = fifthGrag.querySelectorAll(".test-diagrams-items");
   const startFifthGrafAnimation = document.querySelector('.start-fifth-graf-animation').getBoundingClientRect().top;
 
@@ -181,18 +181,94 @@ window.onload = function () {
         var interval = setInterval(function () {
           item.innerHTML = ++start; // увеличиваем счетчик
 
-          // убираю прозрачность у счетчиков
-          fifthGragUnit.forEach(item => { item.classList.add('unit'); })
-          fifthGragTestDiagrams.forEach(item => { item.classList.add('opacity-1'); })
-
-          if (start == end) {
+          if (start > end) {
             clearInterval(interval);
           }
         }, speed); // скорость прокрутки
+
+        // убираю прозрачность у счетчиков
+        fifthGragTestDiagrams.forEach(item => { item.classList.add('opacity-1'); })
+
+        //---------------построение диаграмы-----------
+        Chart.defaults.elements.arc.borderWidth = 0;
+        Chart.defaults.elements.arc.roundedCornersFor = 0;
+        Chart.defaults.elements.arc.hoverBorderColor = 'white';
+        Chart.defaults.datasets.doughnut.cutout = '96%';
+
+        var doughnutChart = document.getElementById('doughnutChart');
+
+        if (doughnutChart) {
+          new Chart(doughnutChart, {
+            options: {
+              plugins: {
+                tooltip: {
+                  enabled: false
+                }
+              }
+            },
+
+            type: 'doughnut',
+
+            // The data for our dataset
+            data: {
+              labels: {
+                render: 'label'
+              },
+              datasets: [{
+                data: [25, 22],
+                backgroundColor: [
+                  '#2A4EFE',
+                  '#E627FE'
+                ]
+              }]
+            },
+            plugins: [
+              {
+                afterUpdate: function (chart) {
+                  if (chart.options.elements.arc.roundedCornersFor !== undefined) {
+                    var arc = chart.getDatasetMeta(0).data[chart.options.elements.arc.roundedCornersFor];
+
+                    arc.round = {
+                      x: (chart.chartArea.left + chart.chartArea.right) / 2,
+                      y: (chart.chartArea.top + chart.chartArea.bottom) / 2,
+                      radius: (arc.outerRadius + arc.innerRadius) / 2,
+                      thickness: (arc.outerRadius - arc.innerRadius) / 2,
+                      backgroundColor: arc.options.backgroundColor
+                    }
+                  }
+                },
+                // afterDraw: (chart) => {
+                //     if (chart.options.elements.arc.roundedCornersFor !== undefined) {
+                //         var {ctx, canvas} = chart;
+                //         var arc = chart.getDatasetMeta(0).data[chart.options.elements.arc.roundedCornersFor];
+
+                //         var startAngle = Math.PI / 2 - arc.startAngle;
+                //         var endAngle = Math.PI / 2 - arc.endAngle;
+
+                //         ctx.save();
+                //         ctx.translate(arc.round.x, arc.round.y);
+                //         ctx.fillStyle = arc.round.backgroundColor;
+                //         ctx.beginPath();
+                //         ctx.arc(arc.round.radius * Math.sin(startAngle), arc.round.radius * Math.cos(startAngle), arc.round.thickness, 0, 2 * Math.PI);
+                //         ctx.arc(arc.round.radius * Math.sin(endAngle), arc.round.radius * Math.cos(endAngle), arc.round.thickness, 0, 2 * Math.PI);
+                //         ctx.closePath();
+                //         ctx.fill();
+                //         ctx.restore();
+                //     }
+                // }
+              }
+            ]
+
+          });
+        }
+        //--------/--построение диаграмы
+
       }
     });
 
   });
+
+
 
   //прокрутили до 6-ого блока
   const sixthGrag = document.querySelector(".graf-js--6");

@@ -226,9 +226,11 @@ small {
 }
 
 
-/* .chart {
-    min-width: 500px;
-  } */
+.chart {
+  fill: none;
+  }
+
+
 
 .unit {
   fill: none;
@@ -236,11 +238,10 @@ small {
   cursor: pointer;
 
   animation-name: render;
-  animation-duration: 1.5s;
+  animation-duration: 10.5s;
   transition-property: all;
   transition-duration: 1.5s;
 
-  /* opacity: 0; */
 }
 
 

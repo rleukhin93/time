@@ -16,13 +16,13 @@
 
 .test-diagrams__yes {
   top: 0;
-  right:0;
+  right:-20px;
   color: #2a4dff;
   text-align: right;
 }
 .test-diagrams__no {
   bottom: 0;
-  left: 0;
+  left: -30px;
   color: #E627FE;
 }
 

@@ -5,7 +5,7 @@
   <meta charset='UTF-8'>
   <meta name='viewport' content='width=device-width, initial-scale=1.0'>
 
-  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css' >
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css'>
 
   <title>ИНДУСТРИАЛЬНЫЙ ОТЧЕТ - SlideNav</title>
 
@@ -175,7 +175,8 @@
             <!-- <img class='report-histograms__img' src='images/gr-1.svg' alt=''> -->
           </div>
           <div class='report-histograms__col'>
-            <div class='text-small-bold nowrap mobile-start-first-graf-animation'>Динамика бюджета 1Н&nbsp;2022&nbsp;/ 1Н&nbsp;2021, %</div>
+            <div class='text-small-bold nowrap mobile-start-first-graf-animation'>Динамика бюджета 1Н&nbsp;2022&nbsp;/
+              1Н&nbsp;2021, %</div>
             <!-- ------------------------- -->
             <div class='graf-js graf-js--2 graf-5-col graf-5-col--right' data-info='* Включая букмекеров'
               data-info-1='Источник: внутренняя аналитика НРА'>
@@ -408,20 +409,22 @@
               не&nbsp;пробовали, %&nbsp;опрошенных
             </div>
 
-            <div class='test-diagrams graf-js--5'>
-              <div class='canvas'>
-                <svg class='chart' style='fill: none;' width='300' height='300' viewBox='0 0 40 40'>
-                  <circle class='circle' r='16.5' cx='50%' cy='50%'></circle>
-                  <circle class='circle' r='16.5' cx='50%' cy='50%'></circle>
-                  <span class='test-diagrams-items test-diagrams__yes'>
-                    <span class='number-js' data-max='53' data-speed='10'>0</span>%<br>Да
-                  </span>
-                  <span class='test-diagrams-items test-diagrams__no'>
-                    <span class='number-js' data-max='47' data-speed='10'>0</span>%<br>Нет
-                  </span>
-                </svg>
-              </div>
+
+            <!-- --------------------------------------------- -->
+            <div class="container-diagram graf-js--5">
+              <canvas id="doughnutChart"></canvas>
+              <span class='test-diagrams-items test-diagrams__yes'>
+                <span class='number-js' data-max='52' data-speed='10'>0</span>%<br>Да
+              </span>
+              <span class='test-diagrams-items test-diagrams__no'>
+                <span class='number-js' data-max='46' data-speed='10'>0</span>%<br>Нет
+              </span>
             </div>
+            <!-- --------------------------------------------- -->
+
+
+
+
             <!-- <img class='report-histograms__img' src='images/gr-4.svg' alt='' /> -->
             <small class='first'>Источник: НРА/OMI, &laquo;Изучение, замещение, адаптация&raquo;</small>
             <div class='text-small-bold second mtb-sm-60px start-fifth-graf-animation'>
@@ -597,7 +600,8 @@
             <small>Источник: Mediascope, TV&nbsp;Index, 2021</small> -->
           </div>
           <div class='tv-without-border__col graf-js--8'>
-            <div class='text-small-bold text-small-bold--22 mobile-start-seventh-graf-animation'>Количество телезрителей во&nbsp;всем мире 2017&ndash;2026,
+            <div class='text-small-bold text-small-bold--22 mobile-start-seventh-graf-animation'>Количество телезрителей
+              во&nbsp;всем мире 2017&ndash;2026,
               млрд человек</div>
 
             <div class='graf-js graf-10-col'
@@ -738,8 +742,8 @@
         <div class='text-small-bold start-ninth-graf-animation'>
           Вклад ТВ в каждый этап воронки продаж, % опрошенных
         </div>
-        
-        
+
+
 
         <div class='tv-navigator graf-js--10'>
           <div class='tv-navigator-row'>
@@ -814,6 +818,8 @@
   <script src='https://code.jquery.com/jquery-3.6.1.min.js'></script>
   <script src='https://aishek.github.io/jquery-animateNumber/javascripts/jquery.animateNumber.js'></script>
   <script src='https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js'></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"></script>
+  
   <script src='./js/jquery.paroller.js'></script>
   <script src='./js/script.js'></script>
 
